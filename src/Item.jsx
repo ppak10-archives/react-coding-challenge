@@ -6,8 +6,12 @@
 // Node Modules
 import React from 'react';
 
-export default function Item() {
+export default function Item(props) {
   return (
-    <div>Hello</div>
+    <li className="item">
+      <span>{props.item.title || 'Item Name'}</span>
+      <span>{props.item.description || 'Item Description'}</span>
+      <span>{props.item.price || 'Item Price'}</span>
+    </li>
   )
 }

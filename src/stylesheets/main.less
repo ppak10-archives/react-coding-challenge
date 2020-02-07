@@ -7,12 +7,13 @@ html, body {
   display: flex;
   flex: 1;
   flex-direction: column;
+  height: 100%;
 
   .navigation-bar {
     align-items: center;
     box-shadow: 0 0.1em 0.25em grey;
     display: flex;
-    height: 4em;
+    min-height: 4em;
     padding: 0 10em;
     
     .restaurant-info {
@@ -32,11 +33,48 @@ html, body {
   .main-content {
     align-items: center;
     display: flex;
+    flex: 1;
     flex-direction: column;
+    height: 100%;
+    overflow: hidden;
     padding: 4em;
 
-    .item-header {
+    .items {
       display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      width: 25em;
+
+      .item-header {
+        align-items: center;
+        display: flex;
+
+        .category {
+          margin: 0;
+          flex: 1;
+        }
+      }
+
+      .item-list {
+        list-style: none;
+        margin: 0;
+        overflow-y: scroll;
+        padding: 0;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        .item {
+          border: 0.1em solid grey;
+          border-radius: 0.25em;
+          display: flex;
+          flex-direction: column;
+          margin: 1em 0;
+          padding: 1em;
+        }
+      }
     }
   }
 }
