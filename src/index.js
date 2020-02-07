@@ -3,10 +3,14 @@
  * Entry file for webpack bundler
  */
 
- // Node Modules
- import React from 'react';
- import {render} from 'react-dom';
+// Node Modules
+import React from 'react';
+import {render} from 'react-dom';
 
- import App from './App'
+// Components
+import App from './App';
 
- render(<App />, document.getElementById('root'))
+// Stylesheets
+import './stylesheets/main.less';
+
+render(<App />, document.getElementById('root'))
