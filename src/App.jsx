@@ -16,7 +16,6 @@ const {storeGroups} = brands[0];
 const {items} = storeGroups[0].stores[0].menus[0].campaignMenuAudits[0];
 
 export default function App() {
-  console.log(brands, brands[0].name, items)
 
   // JSX
   const itemsJSX = items.map((item) => <Item item={item}/>);
@@ -25,8 +24,10 @@ export default function App() {
     <div className="app">
       <nav className="navigation-bar">
         <div className="restaurant-info">
-          <span>{brands[0].name || 'Restaurant Name'}</span>
-          <span>{storeGroups[0].stores[0].address || 'Restaurant Name'}</span>
+          <span className="name">{brands[0].name || 'Restaurant Name'}</span>
+          <span className="address">
+            {storeGroups[0].stores[0].address || 'Restaurant Name'}
+          </span>
         </div>
         <span className="user-profile" />
       </nav>

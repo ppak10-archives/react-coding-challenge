@@ -20,6 +20,14 @@ html, body {
       display: flex;
       flex-direction: column;
       flex: 1;
+
+      .name {
+        font-weight: 700;
+      }
+
+      .address {
+        color: grey;
+      }
     }
 
     .user-profile {
@@ -43,15 +51,20 @@ html, body {
       display: flex;
       flex-direction: column;
       overflow: hidden;
-      width: 25em;
+      width: 30em;
 
       .item-header {
         align-items: center;
         display: flex;
+        padding: 0.5em 1em;
 
         .category {
           margin: 0;
           flex: 1;
+        }
+
+        .items-length {
+          color: grey;
         }
       }
 
@@ -59,7 +72,7 @@ html, body {
         list-style: none;
         margin: 0;
         overflow-y: scroll;
-        padding: 0;
+        padding: 0 1em;
         scrollbar-width: none;
 
         &::-webkit-scrollbar {
@@ -67,12 +80,22 @@ html, body {
         }
 
         .item {
-          border: 0.1em solid grey;
           border-radius: 0.25em;
+          box-shadow: 0 0 0.25em grey;
           display: flex;
           flex-direction: column;
           margin: 1em 0;
           padding: 1em;
+
+          .name {
+            font-weight: 900;
+            margin-bottom: 0.5em;
+          }
+
+          .description {
+            color: grey;
+            margin-bottom: 0.5em;
+          }
         }
       }
     }

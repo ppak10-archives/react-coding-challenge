@@ -7,11 +7,17 @@
 import React from 'react';
 
 export default function Item(props) {
+  const priceString = props.item.price.toString();
+
   return (
     <li className="item">
-      <span>{props.item.title || 'Item Name'}</span>
-      <span>{props.item.description || 'Item Description'}</span>
-      <span>{props.item.price || 'Item Price'}</span>
+      <span className="name">{props.item.title || 'Item Name'}</span>
+      <span className="description">
+        {props.item.description || 'Item Description'}
+      </span>
+      <span className="price">
+        {`$${priceString.slice(0, priceString.length - 2)}.${priceString.slice(-2)}`}
+      </span>
     </li>
   )
 }
